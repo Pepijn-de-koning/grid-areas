@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Muli', sans-serif;
+}
+
+h3 {
+  font-family: 'Muli', sans-serif;
+}
+
+header {
+  padding: 2em;
+  background-color: #ffffcc;
+}
+
+h1, .tagline {
+  color: #e6e600;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+
+.getal {
+  background-color: #ffffcc;
+  color: #e6e600;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+
+article {
+  padding: 1em;
+}
+
+section img {
+  max-width: 100%;
+}
+
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside h3 {
+  background-color: #ffffcc;
+  padding: 2em;
+  color: #e6e600;
+}
+
+aside a {
+  text-decoration: none;
+  padding: 2em;
+  display: block;
+}
+
+aside a:hover {
+  background-color: #ffff99;
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  color: #eee;
+  padding: 2em;
+}
+
+@media screen and (min-width: 760px) {
+  .afb {
+    display: block;
+    background-image: url('img/sport.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop"
+      "t1 t2"
+      "t3 t4"
+      "t3 t5"
+      "afb t6"
+      "t7 aside"
+      "t8 aside"
+      "t9 aside"
+      "t10 aside"
+      "voet voet";
+  }
+
+  header {
+    grid-area: kop;
+  }
+
+  .simpel {
+    grid-area: t1;
+  }
+
+  .Shutter {
+    grid-area: t2;
+  }
+
+  .Compositie {
+    grid-area: t3;
+  }
+
+  .fotos {
+    grid-area: t4;
+  }
+
+  .afb {
+    grid-area: afb;
+  }
+
+  .Lightroom {
+    grid-area: t5;
+  }
+
+  .RAW {
+    grid-area: t6;
+  }
+
+  .Handmatig {
+    grid-area: t7;
+  }
+
+  .tijd {
+    grid-area: t8;
+  }
+
+  .uitdagen {
+    grid-area: t9;
+  }
+
+  .Camera {
+    grid-area: t10;
+  }
+
+  aside {
+    grid-area: aside;
+    background-color: white;
+  }
+
+  footer {
+    grid-area: voet;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+
+  .right {
+    padding-left: 20%;
+    padding-top: 10%;
+  }
+
+  .foto-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foto-tekst h3 {
+    grid-column: span 2;
+  }
+
+  footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+  @media screen and (min-width: 1000px) {
+    body {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "kop kop kop"
+        "t1 t2 afb"
+        "t3 t4 afb"
+        "t3 t5 afb"
+        "t6 t5 aside"
+        "t8 t7 aside"
+        "t10 t9 aside"
+        "voet voet aside";
+    }
+  }
